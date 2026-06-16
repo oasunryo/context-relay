@@ -25,8 +25,10 @@ Pasting this generated output into the new session instantly aligns the new agen
 ## 🚀 Installation & Integration
 
 ### Interactive Installation
-Run the installer script in your project root or home directory:
+Clone this repository and run the installer script in your project root or home directory:
 ```bash
+git clone https://github.com/oasunryo/context-relay.git
+cd context-relay
 chmod +x install.sh
 ./install.sh
 ```
@@ -41,15 +43,46 @@ Choose from:
 
 ---
 
-## 📖 Usage Flow
+## 📖 Step-by-Step Usage Scenario
 
-1. Ask the AI agent:
-   > "다른 대화에서 이어서 하고 싶어요." (I want to continue this in a new conversation.)
-   > "작업 이관해줘." (Hand over the tasks.)
-2. Copy the generated markdown output block.
-3. Open a new chat session.
-4. Select the same workspace path.
-5. Paste the markdown block. The new session will immediately resume from the precise checkpoint.
+Here is an example of how to migrate your work session using **Context Relay**:
+
+### Step 1: Request Handoff
+Ask your AI Agent in your active coding session to prepare for migration:
+> "이거 다음 대화로 넘겨줘" (Hand this over to the next conversation)
+> "다른 대화에서 이어서 하고 싶어요." (I want to continue this in a new conversation.)
+
+### Step 2: Copy the Generated Brief
+The AI Agent will output a structured Markdown brief detailing the project's state:
+````markdown
+# Session Handover Context (Via Context Relay)
+We are resuming a development task from a previous conversation session.
+Source Session ID: 0cdbecce-083c-46cc-a7e9-f5a95c42ec74
+Project Workspace Directory: /Users/oasunryo/workspace/my-app
+
+## 1. High-Level Objective
+Implementing user authentication flow using custom JWT.
+
+## 2. Current Development State
+- **Files Modified/Created**:
+  - `auth.js` -> Added logic for validating tokens.
+
+## 3. Task Status
+- [x] Create login layout
+- [/] Connect login API with front-end
+- [ ] Add session timeout logic
+
+## 4. Next Immediate Steps
+1. **Step 1**: Finish connecting the API in `auth.js`.
+2. **Step 2**: Run `npm test` to verify login validation passes.
+````
+**Copy** this Markdown block.
+
+### Step 3: Resume in a New Session
+1. Open a **new conversation** window in your AI IDE or chat UI.
+2. Select the **same project workspace**.
+3. **Paste** the copied Markdown block into the chat.
+4. The new AI agent will read the context and resume the task exactly where the last session left off.
 
 ---
 
