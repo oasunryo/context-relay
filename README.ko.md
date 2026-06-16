@@ -15,6 +15,15 @@
 
 ---
 
+## 🦄 호환성 (Compatibility)
+
+**Context Relay**는 거의 모든 주요 AI 코딩 어시스턴트 및 LLM 인터페이스와 호환됩니다:
+*   **AI IDE / 확장 기능**: Cursor, Cline (Roo Code), Antigravity, GitHub Copilot.
+*   **CLI 기반 AI 에이전트**: Claude Code, Aider.
+*   **웹 대화형 인터페이스**: ChatGPT, Claude Projects, Gemini Advanced.
+
+---
+
 ## 🦄 주요 기능
 
 작업 도중 새로운 대화창으로 세션을 이관하려고 할 때, AI 에이전트가 다음과 같이 동작하도록 지침을 제공합니다:
@@ -43,7 +52,7 @@ chmod +x install.sh
 *   **Roo Code / Cline**: 프로젝트 루트의 `.roo/instructions.md` 파일로 복사 추가
 
 ### 수동 설정
-*   **ChatGPT Custom Instructions / Claude Projects**: `SKILL.md` 파일의 텍스트 내용을 통째로 복사하여 시스템 설정 또는 프로젝트 지식 베이스 창에 입력합니다.
+*   **CLI / 기타 에이전트 (Claude Code, Copilot, ChatGPT, Claude Projects 등)**: `SKILL.md` 파일의 내용을 통째로 복사한 다음, 시스템 프롬프트 설정(예: `.claudeprompts`, Custom Instructions, 프로젝트 지식베이스)에 붙여넣어 연동합니다.
 
 ---
 

@@ -15,6 +15,15 @@ A cross-platform, framework-agnostic system prompt configuration that enables ze
 
 ---
 
+## 🦄 Compatibility
+
+**Context Relay** works with all major AI coding assistants and LLM chat interfaces:
+*   **AI IDEs / Extensions**: Cursor, Cline (Roo Code), Antigravity, GitHub Copilot.
+*   **CLI AI Agents**: Claude Code, Aider.
+*   **Web Interfaces**: ChatGPT, Claude Projects, Gemini Advanced.
+
+---
+
 ## 🦄 What it Does
 
 When you transition a task to a new conversation window, this instruction set forces the AI Agent to:
@@ -43,7 +52,7 @@ Choose from:
 *   **Roo Code / Cline**: Copies instructions into `.roo/instructions.md`.
 
 ### Manual Configuration
-*   **ChatGPT Custom Instructions / Claude Projects**: Copy the contents of `SKILL.md` and paste it into your system instructions, project knowledge, or custom instructions window.
+*   **CLI / Other Agents (Claude Code, Copilot, ChatGPT, Claude Projects)**: Copy the contents of `SKILL.md` and append/paste it into your system prompt configurations (e.g., `.claudeprompts`, custom instructions, or reference context).
 
 ---
 
