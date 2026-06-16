@@ -1,49 +1,47 @@
-# Antigravity Session Handover Skill
+# Agent Session Handover
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A custom skill for the Antigravity AI coding assistant that enables zero-loss development context handover between different conversation sessions.
+A cross-platform, framework-agnostic system prompt configuration that enables zero-loss development context handovers for AI coding assistants when migrating tasks between different conversation sessions.
 
 ---
 
 ## 🦄 What it Does
 
-When you need to transition a task to a new conversation window, this skill automatically audits the current state (workspace path, git changes, `task.md` status, architecture decisions) and generates a copy-pasteable context prompt in English for the next agent.
+When you transition a task to a new conversation window, this instruction set forces the AI Agent to:
+1. Audit the workspace state (Git diffs, file modifications, architecture choices).
+2. Read the active checklists (e.g. `task.md` or `TODO.md`).
+3. Generate a highly structured, copy-pasteable context prompt in English for the next conversation.
+
+Pasting this generated output into the new session instantly aligns the new agent to continue working without starting over.
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation & Integration
 
-### Using Installation Script
-Clone this repository and run the install script:
+### Interactive Installation
+Run the installer script in your project root or home directory:
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
 
-### Manual Installation
-Copy the `SKILL.md` file directly into your Antigravity skills directory:
-```bash
-mkdir -p ~/.gemini/antigravity/scratch/.agents/skills/session-handover
-cp SKILL.md ~/.gemini/antigravity/scratch/.agents/skills/session-handover/SKILL.md
-```
+Choose from:
+*   **Antigravity Custom Skill**: Copies the instruction file into Antigravity's global custom skills directory.
+*   **Cursor**: Appends instructions to your project's `.cursorrules`.
+*   **Roo Code / Cline**: Copies instructions into `.roo/instructions.md`.
+
+### Manual Configuration
+*   **ChatGPT Custom Instructions / Claude Projects**: Copy the contents of `SKILL.md` and paste it into your system instructions, project knowledge, or custom instructions window.
 
 ---
 
-## 📖 How to Use
+## 📖 Usage Flow
 
-Simply ask Antigravity in Korean when you want to migrate:
-> "다른 대화에서 이어서 하고 싶어요." (I want to continue in another conversation.)
-> "작업 이관해줘." (Hand over the tasks.)
-
-Antigravity will output a structured English handover block like this:
-```markdown
-# Session Handover Context
-We are resuming a development task from a previous conversation session.
-Source Session ID: 0cdbecce-083c-46cc-a7e9-f5a95c42ec74
-Project Workspace Directory: /Users/oasunryo/.gemini/antigravity/scratch/session-handover
-
-## 1. High-Level Objective
-...
-```
-Copy that block, open a new chat session, select the same workspace directory, and paste it to instantly restore state.
+1. Ask the AI agent:
+   > "다른 대화에서 이어서 하고 싶어요." (I want to continue this in a new conversation.)
+   > "작업 이관해줘." (Hand over the tasks.)
+2. Copy the generated markdown output block.
+3. Open a new chat session.
+4. Select the same workspace path.
+5. Paste the markdown block. The new session will immediately resume from the precise checkpoint.
