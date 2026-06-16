@@ -70,8 +70,8 @@ The AI Agent will output a structured Markdown brief detailing the project's sta
 ````markdown
 # Session Handover Context (Via Context Relay)
 We are resuming a development task from a previous conversation session.
-Source Session ID: 0cdbecce-083c-46cc-a7e9-f5a95c42ec74
-Project Workspace Directory: /Users/oasunryo/workspace/my-app
+Source Session ID: <PREVIOUS_SESSION_ID>
+Project Workspace Directory: /path/to/your/project
 
 ## 1. High-Level Objective
 Implementing user authentication flow using custom JWT.
