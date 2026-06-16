@@ -5,8 +5,6 @@
   <img src="https://img.shields.io/github/forks/oasunryo/context-relay?style=for-the-badge&color=007acc" alt="GitHub forks">
   <img src="https://img.shields.io/github/issues/oasunryo/context-relay?style=for-the-badge&color=red" alt="GitHub issues">
   <img src="https://img.shields.io/github/license/oasunryo/context-relay?style=for-the-badge" alt="License">
-  <br>
-  <img src="https://hits.dwyl.com/oasunryo/context-relay.svg" alt="Hits">
 </p>
 
 A cross-platform, framework-agnostic system prompt configuration that enables zero-loss development context handovers for AI coding assistants when migrating tasks between different conversation sessions.
