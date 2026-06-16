@@ -1,4 +1,4 @@
-# AI Agent Session Handover Instructions
+# Context Relay Instructions
 
 This instruction guide configures AI coding agents (such as Antigravity, Cursor, Cline, Roo Code, or ChatGPT/Claude) to perform seamless, zero-loss development context handovers when migrating tasks between different conversation sessions.
 
@@ -27,7 +27,7 @@ Before generating the final handover prompt, the agent *must* perform a comprehe
 The agent must output the final package in the chat window inside a copy-pasteable Markdown block structured exactly as follows:
 
 ```markdown
-# Session Handover Context
+# Session Handover Context (Via Context Relay)
 We are resuming a development task from a previous conversation session.
 Source Session ID: [Insert Current Conv/Session ID]
 Project Workspace Directory: [Insert Absolute Workspace Path]

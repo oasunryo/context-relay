@@ -7,7 +7,7 @@ ROO_CLINE_DIR=".roo"
 CURSOR_FILE=".cursorrules"
 
 echo "========================================="
-echo " AI Agent Session Handover Installer"
+echo " AI Agent Context Relay Installer"
 echo "========================================="
 echo "Select where you want to install the handover configurations:"
 echo "1) Antigravity Custom Skill (Global: ~/.gemini/...)"
