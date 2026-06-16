@@ -7,6 +7,11 @@
   <img src="https://img.shields.io/github/license/oasunryo/context-relay?style=for-the-badge" alt="License">
 </p>
 
+<p align="center">
+  <a href="./README.ko.md"><b>🇰🇷 한국어 설명서</b></a> |
+  <a href="https://translate.google.com/translate?sl=en&tl=ko&u=https://github.com/oasunryo/context-relay"><b>🌐 Google Translate</b></a>
+</p>
+
 A cross-platform, framework-agnostic system prompt configuration that enables zero-loss development context handovers for AI coding assistants when migrating tasks between different conversation sessions.
 
 ---

@@ -1,0 +1,84 @@
+# Context Relay (컨텍스트 릴레이)
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/oasunryo/context-relay?style=for-the-badge&color=ffd700" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/oasunryo/context-relay?style=for-the-badge&color=007acc" alt="GitHub forks">
+  <img src="https://img.shields.io/github/issues/oasunryo/context-relay?style=for-the-badge&color=red" alt="GitHub issues">
+  <img src="https://img.shields.io/github/license/oasunryo/context-relay?style=for-the-badge" alt="License">
+</p>
+
+<p align="center">
+  <a href="./README.md"><b>🇺🇸 English Document</b></a>
+</p>
+
+다양한 AI 코딩 에이전트(Antigravity, Cursor, Cline 등)가 다른 대화 세션으로 전환할 때, 개발 진행 상황과 환경을 유실 없이 그대로 이어서 진행할 수 있도록 설계된 크로스 플랫폼 및 범용 시스템 프롬프트(명세서) 구성입니다.
+
+---
+
+## 🦄 주요 기능
+
+작업 도중 새로운 대화창으로 세션을 이관하려고 할 때, AI 에이전트가 다음과 같이 동작하도록 지침을 제공합니다:
+1. 현재 프로젝트 워크스페이스 상태 분석 (Git diff, 파일 수정 내역, 설계적 결정 사항).
+2. 활성화된 체크리스트 분석 (`task.md` 또는 `TODO.md`).
+3. 다음 대화에 바로 복사-붙여넣기 할 수 있는 고도로 최적화된 영어 컨텍스트 브리프(Brief) 생성.
+
+생성된 출력값을 새 대화 세션에 붙여넣기만 하면, 새로운 에이전트가 처음부터 다시 학습하지 않고 이전 작업을 그대로 이어받아 수행합니다.
+
+---
+
+## 🚀 설치 및 적용 방법
+
+### 대화형 스크립트로 설치
+이 저장소를 클론하고 아래 설치 스크립트를 실행합니다:
+```bash
+git clone https://github.com/oasunryo/context-relay.git
+cd context-relay
+chmod +x install.sh
+./install.sh
+```
+
+원하는 에디터 환경을 선택하여 적용합니다:
+*   **Antigravity Custom Skill**: Antigravity 전용 커스텀 스킬 폴더에 자동 추가
+*   **Cursor**: 프로젝트 루트의 `.cursorrules` 파일 뒤에 연동 추가
+*   **Roo Code / Cline**: 프로젝트 루트의 `.roo/instructions.md` 파일로 복사 추가
+
+### 수동 설정
+*   **ChatGPT Custom Instructions / Claude Projects**: `SKILL.md` 파일의 텍스트 내용을 통째로 복사하여 시스템 설정 또는 프로젝트 지식 베이스 창에 입력합니다.
+
+---
+
+## 📖 단계별 사용 시나리오
+
+**Context Relay**를 사용하여 코딩 세션을 마이그레이션하는 예시 흐름입니다.
+
+### 1단계: 마이그레이션 요청
+활성화된 AI 세션 대화창에 한글로 이관을 요청합니다:
+> "이거 다음 대화로 넘겨줘"
+> "다른 대화에서 이어서 하고 싶어요."
+
+### 2단계: 생성된 요약 브리프(Brief) 복사
+에이전트가 프로젝트 상태를 요약한 마크다운을 출력해 줍니다:
+```markdown
+# Session Handover Context (Via Context Relay)
+We are resuming a development task from a previous conversation session.
+Source Session ID: 0cdbecce-083c-46cc-a7e9-f5a95c42ec74
+Project Workspace Directory: /Users/oasunryo/workspace/my-app
+
+## 1. High-Level Objective
+Implementing user authentication flow using custom JWT.
+
+...
+```
+출력된 마크다운 코드 블록을 **복사**합니다.
+
+### 3단계: 새 세션에서 바로 재개하기
+1. 사용 중인 AI 툴에서 **새 대화창(New Chat)**을 생성합니다.
+2. **동일한 프로젝트 폴더**를 열어둡니다.
+3. 복사했던 요약 브리프 블록을 대화창에 **붙여넣기**하여 전송합니다.
+4. 새로운 AI 세션이 전후 상황을 즉시 완벽하게 파악하고 하던 작업을 바로 이어서 코딩을 시작합니다.
+
+---
+
+## 📈 스타 히스토리
+
+[![Star History Chart](https://api.star-history.com/svg?repos=oasunryo/context-relay&type=Date)](https://star-history.com/#oasunryo/context-relay&Date)
